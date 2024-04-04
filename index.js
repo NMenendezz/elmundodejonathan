@@ -43,7 +43,7 @@ app.use(logger)
 app.use(express.json())
 // app.use(json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
-//app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(errorHandler)
 
 app.use('/api/auth', authRouter)
