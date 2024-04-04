@@ -26,6 +26,7 @@ if (process.env.NODE_ENV === 'production') {
     serviceAccountKey = module.default;
   });
 }
+
 const BASEURL = process.env.BASEURL
 const PORT = process.env.PORT || 3001
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
