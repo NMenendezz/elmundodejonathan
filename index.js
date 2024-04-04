@@ -43,7 +43,6 @@ app.use(express.json())
 // app.use(json({ limit: '10mb' }))
 app.use(express.urlencoded({ extended: true }))
 //app.use(cors(corsOptions))
-app.use(cors)
 app.use(errorHandler)
 
 app.use('/api/auth', authRouter)
@@ -59,5 +58,9 @@ app.get('*', (req, res) => {
 app.all('*', errorHandler)
 
 app.listen(PORT, () => {
-  console.log(`Server started at ${BASEURL}:${PORT}`)
+  if (process.env.NODE_ENV === 'production') {
+    console.log('App launched 🚀')
+  } else {
+    console.log(`App started at ${BASEURL}:${PORT}`)
+  }
 })
