@@ -1,14 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 import '@/App.css'
-import { Layout } from '@/components/Layout/layout';
+import Layout from '@/components/Layout/Layout';
 
 const App = () => {
   return (
     <>
-      <h1>El mundo de Jonathan</h1>
-      <h4>Entorno de desarrollo</h4>
       <Routes>
-        <Route path="/" element={<Layout />}></Route>
+        <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Home />} /> */}
+          {/*  <Route path="/posts" element={<Home />} /> */}
+          {/* <Route path="/about" element={<AboutMe />} /> */}
+          {/* <Route path="/post/:id" element={<Post />} /> */}
+          {/* <Route path="/new_post" element={<NewPost />} /> */}
+          {/* <Route path="/update_post/:id" element={<NewPost />} /> */}
+          {/* <Route path="*" element={<Error404 />} /> */}
+        </Route>
+        {/* <Route path="/login" element={<Login />} /> */}
+        {/* <Route path="/register" element={<Register />} /> */}
       </Routes>
     </>
   )
