@@ -1,0 +1,10 @@
+###
+GET http://localhost:3001/api/categories
+
+###
+POST http://localhost:3001/api/categories/new
+content-type: application/json
+
+{
+  "name": "Tecnología"
+}

@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /admin
+Disallow: /private
+Disallow: /api
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+Disallow: /404
+Disallow: /500
+
+Allow: /public
+Allow: /assets
+Allow: /favicon.ico
+
+Sitemap: https://www.example.com/sitemap.xml

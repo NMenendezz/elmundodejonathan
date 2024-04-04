@@ -1,0 +1,36 @@
+{
+  "name": "elmundodejonathan",
+  "version": "1.0.0",
+  "engines": {
+    "node": "20.12.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "build": "cd client && pnpm install && pnpm run build"
+  },
+  "keywords": [],
+  "author": "Nacho Menéndez",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.1550.0",
+    "bcryptjs": "2.4.3",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "date-fns": "2.30.0",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "firebase-admin": "12.0.0",
+    "jsonwebtoken": "9.0.1",
+    "mongoose": "7.4.0",
+    "sharp": "0.32.4",
+    "uuid": "9.0.0",
+    "zod": "3.22.4"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
