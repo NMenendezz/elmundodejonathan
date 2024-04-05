@@ -1,4 +1,3 @@
-//import serviceAccountKey from './server/config/el-mundo-de-jonathan-firebase-adminsdk-1jvzj-0cd8e9aed0.json' assert { type: "json" }
 import { errorHandler } from './server/middleware/errorHandler.js'
 import categoryRouter from './server/routes/category.js'
 import corsOptions from './server/config/corsOptions.js'
@@ -9,23 +8,12 @@ import connectDB from './server/config/connectDB.js'
 import express, { json } from 'express'
 import { fileURLToPath } from 'url'
 import admin from 'firebase-admin'
-import dotenv from 'dotenv'
 import cors from 'cors'
 import path from 'path'
 
-dotenv.config()
-
 //connectDB()
 
-let serviceAccountKey;
-
-if (process.env.NODE_ENV === 'production') {
-  serviceAccountKey = JSON.parse(process.env.SERVICE_ACCOUNT_KEY);
-} else {
-  import('./server/config/el-mundo-de-jonathan-firebase-adminsdk-1jvzj-0cd8e9aed0.json').then(module => {
-    serviceAccountKey = module.default;
-  });
-}
+const serviceAccountKey = JSON.parse(process.env.SERVICE_ACCOUNT_KEY)
 
 const BASEURL = process.env.BASEURL
 const PORT = process.env.PORT || 3001
@@ -50,11 +38,11 @@ app.use('/api/auth', authRouter)
 app.use('/api/posts', postRouter)
 app.use('/api/categories', categoryRouter)
 
-app.use(express.static(path.resolve(__dirname, './client/dist')));
+app.use(express.static(path.resolve(__dirname, './client/dist')))
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
-});
+  res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'))
+})
 
 app.all('*', errorHandler)
 
