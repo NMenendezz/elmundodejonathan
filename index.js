@@ -1,4 +1,3 @@
-//import serviceAccountKey from './server/config/el-mundo-de-jonathan-firebase-adminsdk-1jvzj-0cd8e9aed0.json' assert { type: "json" }
 import { errorHandler } from './server/middleware/errorHandler.js'
 import categoryRouter from './server/routes/category.js'
 import corsOptions from './server/config/corsOptions.js'
