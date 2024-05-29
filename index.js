@@ -8,8 +8,11 @@ import connectDB from './server/config/connectDB.js'
 import express, { json } from 'express'
 import { fileURLToPath } from 'url'
 import admin from 'firebase-admin'
+import dotenv from 'dotenv';
 import cors from 'cors'
 import path from 'path'
+
+dotenv.config();
 
 //connectDB()
 
