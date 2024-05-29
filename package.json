@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch --trace-warnings --env-file=.env index.js",
-    "build": "cd client && pnpm install && pnpm run build"
+    "build": "pnpm install && cd client && pnpm install && pnpm run build"
   },
   "keywords": [],
   "author": "Nacho Menéndez",
